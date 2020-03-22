@@ -1,0 +1,94 @@
+class CfgFunctions {
+#include "functions.hpp"
+	class GSRI {
+		class liberty {
+			class libertyArsenal {};
+			class libertyPreslots {};
+			class libertyBays {};
+			class libertyBridge {};
+			class libertyWeapons {};
+			class libertyInit {};
+			class libertyBayReplace {};
+		};
+		class heli {
+			class getHeli {};
+			class spawnHeli {};
+			class initHeli {};
+			class minifyName {};
+			class addCleaningAction {};
+			class addFRIESAction {};
+		};
+		class submarine {
+			class initSubmarine {};
+			class submarineSelectPos {};
+			class submarineGetTeleportPos {};
+		};
+		class preslots {
+			class getSoldier {};
+			class getGrenadier {};
+			class getMedic {};
+			class getGunner {};
+			class getDiver {};
+		};
+	};
+};
+
+class CfgNotifications
+{
+	class SubmarineOk
+	{
+		title = "GSRI Insertion System";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
+		iconText = "";
+		description = $STR_GSRI_submarineOk;
+		color[] = {1,1,1,1};
+		duration = 5;
+		priority = 0;
+		difficulty[] = {};
+	};
+	class SubmarineFail
+	{
+		title = "GSRI Insertion System";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+		iconText = "";
+		description = $STR_GSRI_submarineFail;
+		color[] = {1,1,1,1};
+		duration = 5;
+		priority = 0;
+		difficulty[] = {};
+	};
+	class SubmarineInfo
+	{
+		title = "GSRI Insertion System";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\quay_ca.paa";
+		iconText = "";
+		description = $STR_GSRI_submarineInfo;
+		color[] = {1,1,1,1};
+		duration = 5;
+		priority = 0;
+		difficulty[] = {};
+	};
+	class HeliInfo
+	{
+		title = "GSRI Insertion System";
+		iconPicture = "\A3\ui_f\data\map\vehicleicons\iconhelicopter_ca.paa";
+		iconText = "";
+		description = $STR_GSRI_heliInfo;
+		color[] = {1,1,1,1};
+		duration = 5;
+		priority = 0;
+		difficulty[] = {};
+	};
+	class HeliDelete : HeliInfo
+	{
+		description = $STR_GSRI_heliDelete;
+	};
+	class HeliMoved : HeliInfo
+	{
+		description = $STR_GSRI_heliMoved;
+	};
+	class HeliFRIES : HeliInfo
+	{
+		description = $STR_GSRI_heliFRIES;
+	};
+};
