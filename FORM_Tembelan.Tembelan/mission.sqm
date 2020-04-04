@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.017453292;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1582;
+	toggles=554;
 	class ItemIDProvider
 	{
-		nextID=1185;
+		nextID=1190;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=88;
+		nextID=104;
 	};
 	class Camera
 	{
-		pos[]={4658.021,164.84726,341.2952};
-		dir[]={0.021126417,-0.52511138,0.8509118};
-		up[]={0.013028329,0.85093558,0.52511948};
-		aside[]={0.99980491,-2.2878103e-006,-0.024820365};
+		pos[]={4507.2373,27.058224,1052.2935};
+		dir[]={0.0080862017,-0.27522939,0.96148014};
+		up[]={0.0023075365,0.96127087,0.27553633};
+		aside[]={1.0000743,-1.2744504e-006,-0.0084086219};
 	};
 };
 binarizationWanted=0;
@@ -1682,7 +1682,7 @@ class Mission
 						};
 					};
 					id=1174;
-					atlOffset=0.10095406;
+					atlOffset=0.33438015;
 				};
 				class Item1
 				{
@@ -5431,7 +5431,7 @@ class Mission
 				};
 			};
 			id=1171;
-			atlOffset=0.30717421;
+			atlOffset=0.2051506;
 		};
 		class Item2
 		{
@@ -6267,7 +6267,7 @@ class Mission
 							{
 								position[]={4523.875,17.09,1180.375};
 							};
-							areaSize[]={3.0195665,0,3.6945348};
+							areaSize[]={3.02,0,3.6949999};
 							areaIsRectangle=1;
 							flags=1;
 							id=345;
@@ -9524,29 +9524,33 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={4566.1533,19.768541,779.1048};
+								position[]={4566.125,19.798542,779.125};
 								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
 							flags=5;
 							class Attributes
 							{
+								init="call{[this] call GSRI_fnc_initHangar;}";
+								name="hangar";
 							};
 							id=336;
 							type="Land_Airport_01_hangar_F";
+							atlOffset=0.0059089661;
 						};
 						class Item5
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={4566.2954,19.768541,713.9928};
+								position[]={4566.25,19.798542,714};
 								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
 							flags=5;
 							class Attributes
 							{
+								init="call{[this] call GSRI_fnc_initHangar;}";
 							};
 							id=340;
 							type="Land_Airport_01_hangar_F";

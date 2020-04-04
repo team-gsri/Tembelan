@@ -32,4 +32,22 @@
 			<French>%1 a été équipé d'un FRIES.</French>
 		</Key>
 	</Package>
+	<Package name="Selectable_Helicopter">
+		<Key ID="STR_GSRI_selectable_heliReplace">
+			<Original>Replace %1 by %2</Original>
+			<French>Remplacer %1 par %2</French>
+		</Key>
+		<Key ID="STR_GSRI_selectable_heliGet">
+			<Original>Request %2</Original>
+			<French>Demander %2</French>
+		</Key>
+		<Key ID="STR_GSRI_selectable_heliRemove">
+			<Original>Remove %1</Original>
+			<French>Supprimer %1</French>
+		</Key>
+		<Key ID="STR_GSRI_selectable_heliEquipFRIES">
+			<Original>Equip FRIES</Original>
+			<French>Equiper FRIES</French>
+		</Key>
+	</Package>
 </Project>

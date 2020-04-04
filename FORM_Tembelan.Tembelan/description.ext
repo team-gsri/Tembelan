@@ -30,6 +30,14 @@ class CfgFunctions {
 			class getGunner {};
 			class getDiver {};
 		};
+		class selectableheli {
+			class initHangar {};
+			class heliMinifyName {};
+			class heliRetrieveCurrent {};
+			class heliSpawn {};
+			class heliRemove {};
+			class heliEquipFRIES {};
+		};
 	};
 };
 
