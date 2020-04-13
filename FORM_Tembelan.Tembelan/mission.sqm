@@ -9911,7 +9911,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								init="call{this addAction [""Choisir l'itinéraire de l'avion"",{[""init""] spawn GSRI_fnc_airborne}]; " \n "this addAction [""Embarquer"",{[""addWaiting""] spawn GSRI_fnc_airborne}]; " \n "this addAction [""Annuler l'embarquement"",{[""removeWaiting""] spawn GSRI_fnc_airborne}]; " \n "this addAction [""Lancer l'avion"",{[""launchPlane""] spawn GSRI_fnc_airborne}];}";
+								init="call{this addAction [""Choisir l'itinéraire de l'avion"",{[""init""] spawn GSRI_fnc_airborne}]; this addAction [""Embarquer"",{[""addWaiting""] spawn GSRI_fnc_airborne}]; this addAction [""Annuler l'embarquement"",{[""removeWaiting""] spawn GSRI_fnc_airborne}]; this addAction [""Lancer l'avion"",{[""launchPlane""] spawn GSRI_fnc_airborne}];}";
 							};
 							id=563;
 							type="Land_MapBoard_F";
