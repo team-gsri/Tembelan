@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4573.4336,78.84404,797.11517};
-		dir[]={0.0025893985,-0.91978955,0.39270422};
-		up[]={0.0060552983,0.39241785,0.91977215};
-		aside[]={1.0000916,-3.7049867e-006,-0.0065929596};
+		pos[]={4440.5977,20.161896,1326.5179};
+		dir[]={-0.78460604,-0.42133358,-0.45509994};
+		up[]={-0.36463371,0.90681362,-0.2115116};
+		aside[]={-0.50180274,-1.6340055e-006,0.86511469};
 	};
 };
 binarizationWanted=0;
@@ -14085,7 +14085,7 @@ class Mission
 									flags=7;
 									class Attributes
 									{
-										init="call{[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal;" \n "this addAction [""Devenir medic"", { (_this select 1) setVariable [""Ace_medical_medicClass"", 2]; }]; " \n "this addAction [""Devenir non-medic"", { (_this select 1) setVariable [""Ace_medical_medicClass"", 0]; }];" \n "this setUnitPos ""UP""; this disableAI ""ALL"";}";
+										init="call{[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal; this addAction [""Devenir medic"", { (_this select 1) setVariable [""Ace_medical_medicClass"", 2]; }]; this addAction [""Devenir non-medic"", { (_this select 1) setVariable [""Ace_medical_medicClass"", 0]; }]; this setUnitPos ""UP""; this disableAI ""ALL"";}";
 										name="Armurier1";
 										class Inventory
 										{
@@ -14645,7 +14645,7 @@ class Mission
 									flags=6;
 									class Attributes
 									{
-										init="call{[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal;" \n "this addAction [""Devenir medic"", { (_this select 1) setVariable [""Ace_medical_medicClass"", 2]; }]; " \n "this addAction [""Devenir non-medic"", { (_this select 1) setVariable [""Ace_medical_medicClass"", 0]; }];" \n "this setUnitPos ""UP""; this disableAI ""ALL"";}";
+										init="call{[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal; this addAction [""Devenir medic"", { (_this select 1) setVariable [""Ace_medical_medicClass"", 2]; }]; this addAction [""Devenir non-medic"", { (_this select 1) setVariable [""Ace_medical_medicClass"", 0]; }]; this setUnitPos ""UP""; this disableAI ""ALL"";}";
 										name="Armurier2";
 										class Inventory
 										{
