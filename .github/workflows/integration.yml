@@ -1,0 +1,63 @@
+name: integration
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - FORM_Tembelan.Tembelan/**
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Get current date
+      id: date
+      run: echo "::set-output name=date::$(date +'%y%m%d')"
+
+    - name: Checkout files
+      uses: actions/checkout@v2
+
+    - name: Binarize mission
+      uses: docker://arwynfr/armake2:alpine
+      with:
+        entrypoint: /usr/bin/armake2
+        args: rapify /github/workspace/FORM_Tembelan.Tembelan/mission.sqm /github/workspace/FORM_Tembelan.Tembelan/mission.bin
+
+    - name: Delete unrapified file
+      run: rm FORM_Tembelan.Tembelan/mission.sqm
+
+    - name: Rename binarized file
+      run: mv FORM_Tembelan.Tembelan/mission.bin FORM_Tembelan.Tembelan/mission.sqm
+
+    - name: Pack mission
+      uses: docker://arwynfr/armake2:alpine
+      with:
+        entrypoint: /usr/bin/armake2
+        args: pack /github/workspace/FORM_Tembelan.Tembelan /github/workspace/FORM_Tembelan.Tembelan.pbo
+
+    - name: Create release
+      id: create_release
+      uses: actions/create-release@latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ver-${{ steps.date.outputs.date }}
+        release_name: Version ${{ steps.date.outputs.date }}
+        body: ${{ github.event.head_commit.message }}
+        draft: true
+        prerelease: false
+      if: github.event_name == 'push'
+        
+    - name: Upload pbo
+      uses: actions/upload-release-asset@latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_content_type: application/octet-stream
+        asset_path: FORM_Tembelan.Tembelan.pbo
+        asset_name: FORM_Tembelan.Tembelan.pbo
+      if: github.event_name == 'push'
