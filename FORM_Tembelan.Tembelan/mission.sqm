@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=88;
+		nextID=104;
 	};
 	class Camera
 	{
-		pos[]={4658.021,164.84726,341.2952};
-		dir[]={0.021126417,-0.52511138,0.8509118};
-		up[]={0.013028329,0.85093558,0.52511948};
-		aside[]={0.99980491,-2.2878103e-006,-0.024820365};
+		pos[]={4440.5977,20.161896,1326.5179};
+		dir[]={-0.78460604,-0.42133358,-0.45509994};
+		up[]={-0.36463371,0.90681362,-0.2115116};
+		aside[]={-0.50180274,-1.6340055e-006,0.86511469};
 	};
 };
 binarizationWanted=0;
@@ -71,6 +71,7 @@ addons[]=
 	"A3_Structures_F_Enoch_Military_Bunkers",
 	"A3_Structures_F_Enoch_Wrecks",
 	"ace_logistics_wirecutter",
+	"AI_Driving_Control",
 	"A3_Structures_F_Mil_BagBunker",
 	"A3_Structures_F_Tank_Military_Fortifications",
 	"A3_Structures_F_Mil_Cargo",
@@ -118,7 +119,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=56;
+		items=57;
 		class Item0
 		{
 			className="A3_Boat_F_Destroyer";
@@ -332,172 +333,178 @@ class AddonsMetaData
 		};
 		class Item31
 		{
+			className="AI_Driving_Control";
+			name="AI Driving Control";
+			author="RCA3";
+		};
+		class Item32
+		{
 			className="A3_Structures_F_Tank";
 			name="Arma 3 Tank - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item32
+		class Item33
 		{
 			className="ace_concertina_wire";
 			name="ACE3 - Concertina Wire";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item33
+		class Item34
 		{
 			className="A3_Air_F_Exp";
 			name="Arma 3 Apex - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item34
+		class Item35
 		{
 			className="A3_Structures_F_Exp_Infrastructure";
 			name="Arma 3 Apex - Infrastructure Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item35
+		class Item36
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item36
+		class Item37
 		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item37
+		class Item38
 		{
 			className="A3_Props_F_Jets";
 			name="Arma 3 Jets - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item38
+		class Item39
 		{
 			className="r_unfold";
 			name="r_unfold";
 			author="Rallen";
 		};
-		class Item39
+		class Item40
 		{
 			className="A3_Supplies_F_Exp";
 			name="Arma 3 Apex - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item40
+		class Item41
 		{
 			className="ace_dragging";
 			name="ACE3 - Dragging";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item41
+		class Item42
 		{
 			className="UK3CB_BAF_Vehicles_LandRover";
 			name="3CB BAF Vehicles - Land Rover";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item42
+		class Item43
 		{
 			className="UK3CB_BAF_Vehicles_MAN";
 			name="3CB BAF Vehicles - MAN Truck";
 			author="AUTHOR_3CB";
 			url="www.3commandobrigade.com";
 		};
-		class Item43
+		class Item44
 		{
 			className="ace_ballistics";
 			name="ACE3 - Ballistics";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item44
+		class Item45
 		{
 			className="ace_smallarms";
 			name="ACE3 - Small Arms";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item45
+		class Item46
 		{
 			className="A3_Weapons_F_Enoch";
 			name="Arma 3 Enoch - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item46
+		class Item47
 		{
 			className="A3_Weapons_F_Mark";
 			name="Arma 3 Marksmen - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item47
+		class Item48
 		{
 			className="A3_Weapons_F_Exp";
 			name="Arma 3 Apex - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item48
+		class Item49
 		{
 			className="A3_Structures_F_Households";
 			name="Arma 3 - Houses";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item49
+		class Item50
 		{
 			className="A3_Structures_F_Exp_Civilian";
 			name="Arma 3 Apex - Civilian Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item50
+		class Item51
 		{
 			className="A3_Structures_F_Enoch_Infrastructure";
 			name="Arma 3 Enoch - Infrastructure Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item51
+		class Item52
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item52
+		class Item53
 		{
 			className="acex_sitting";
 			name="ACEX - Sitting";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item53
+		class Item54
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item54
+		class Item55
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item55
+		class Item56
 		{
 			className="ace_interaction";
 			name="ACE3 - Interaction";
@@ -1682,7 +1689,7 @@ class Mission
 						};
 					};
 					id=1174;
-					atlOffset=0.10095406;
+					atlOffset=0.33438015;
 				};
 				class Item1
 				{
@@ -5431,7 +5438,7 @@ class Mission
 				};
 			};
 			id=1171;
-			atlOffset=0.30717421;
+			atlOffset=0.2051506;
 		};
 		class Item2
 		{
@@ -9897,17 +9904,18 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={4566.8394,18.139612,853.63055};
+								position[]={4566.8389,18.139881,853.63098};
 								angles[]={0,1.5358897,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								init="this addAction [""Choisir l'itinéraire de l'avion"",{[""init""] spawn GSRI_fnc_airborne}];" \n "this addAction [""Embarquer"",{[""addWaiting""] spawn GSRI_fnc_airborne}];" \n "this addAction [""Annuler l'embarquement"",{[""removeWaiting""] spawn GSRI_fnc_airborne}];" \n "this addAction [""Lancer l'avion"",{[""launchPlane""] spawn GSRI_fnc_airborne}];";
+								init="call{this addAction [""Choisir l'itinéraire de l'avion"",{[""init""] spawn GSRI_fnc_airborne}]; this addAction [""Embarquer"",{[""addWaiting""] spawn GSRI_fnc_airborne}]; this addAction [""Annuler l'embarquement"",{[""removeWaiting""] spawn GSRI_fnc_airborne}]; this addAction [""Lancer l'avion"",{[""launchPlane""] spawn GSRI_fnc_airborne}];}";
 							};
 							id=563;
 							type="Land_MapBoard_F";
+							atlOffset=0.00026893616;
 						};
 						class Item24
 						{
@@ -10252,7 +10260,7 @@ class Mission
 						};
 					};
 					id=1178;
-					atlOffset=0.13717651;
+					atlOffset=0.13718414;
 				};
 				class Item2
 				{
@@ -14077,7 +14085,7 @@ class Mission
 									flags=7;
 									class Attributes
 									{
-										init="call{[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal;" \n "this addAction [""Devenir medic"", { (_this select 1) setVariable [""Ace_medical_medicClass"", 2]; }]; " \n "this addAction [""Devenir non-medic"", { (_this select 1) setVariable [""Ace_medical_medicClass"", 0]; }];" \n "this setUnitPos ""UP""; this disableAI ""ALL"";}";
+										init="call{[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal; this addAction [""Devenir medic"", { (_this select 1) setVariable [""Ace_medical_medicClass"", 2]; }]; this addAction [""Devenir non-medic"", { (_this select 1) setVariable [""Ace_medical_medicClass"", 0]; }]; this setUnitPos ""UP""; this disableAI ""ALL"";}";
 										name="Armurier1";
 										class Inventory
 										{
@@ -14637,7 +14645,7 @@ class Mission
 									flags=6;
 									class Attributes
 									{
-										init="call{[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal;" \n "this addAction [""Devenir medic"", { (_this select 1) setVariable [""Ace_medical_medicClass"", 2]; }]; " \n "this addAction [""Devenir non-medic"", { (_this select 1) setVariable [""Ace_medical_medicClass"", 0]; }];" \n "this setUnitPos ""UP""; this disableAI ""ALL"";}";
+										init="call{[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal; this addAction [""Devenir medic"", { (_this select 1) setVariable [""Ace_medical_medicClass"", 2]; }]; this addAction [""Devenir non-medic"", { (_this select 1) setVariable [""Ace_medical_medicClass"", 0]; }]; this setUnitPos ""UP""; this disableAI ""ALL"";}";
 										name="Armurier2";
 										class Inventory
 										{
@@ -21857,7 +21865,7 @@ class Mission
 				};
 			};
 			id=1180;
-			atlOffset=0.15862465;
+			atlOffset=0.15862656;
 		};
 	};
 };
