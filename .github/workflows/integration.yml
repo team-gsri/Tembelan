@@ -13,10 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: Get current date
-      id: date
-      run: echo "::set-output name=date::$(date +'%y%m%d')"
-
     - name: Checkout files
       uses: actions/checkout@v2
 
@@ -26,11 +22,8 @@ jobs:
         entrypoint: /usr/bin/armake2
         args: rapify /github/workspace/FORM_Tembelan.Tembelan/mission.sqm /github/workspace/FORM_Tembelan.Tembelan/mission.bin
 
-    - name: Delete unrapified file
-      run: rm FORM_Tembelan.Tembelan/mission.sqm
-
-    - name: Rename binarized file
-      run: mv FORM_Tembelan.Tembelan/mission.bin FORM_Tembelan.Tembelan/mission.sqm
+    - name: Replace unbinarized file
+      run: mv --force FORM_Tembelan.Tembelan/mission.bin FORM_Tembelan.Tembelan/mission.sqm
 
     - name: Pack mission
       uses: docker://arwynfr/armake2:alpine
@@ -38,26 +31,32 @@ jobs:
         entrypoint: /usr/bin/armake2
         args: pack /github/workspace/FORM_Tembelan.Tembelan /github/workspace/FORM_Tembelan.Tembelan.pbo
 
-    - name: Create release
-      id: create_release
-      uses: actions/create-release@latest
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Stop server
+      uses: appleboy/ssh-action@master
+      if: github.ref == 'master' && github.event_name == 'push'
       with:
-        tag_name: ver-${{ steps.date.outputs.date }}
-        release_name: Version ${{ steps.date.outputs.date }}
-        body: ${{ github.event.head_commit.message }}
-        draft: true
-        prerelease: false
-      if: github.event_name == 'push'
-        
-    - name: Upload pbo
-      uses: actions/upload-release-asset@latest
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        script: C:\Arma3\Stop-ArmaInstance -Name 'gsri.krypton'
+
+    - name: Copy mission file to server
+      if: github.ref == 'master' && github.event_name == 'push'
+      run: |
+        apt-get update
+        apt-get install --yes openssh-client
+        mkdir -p /root/.ssh
+        echo "${{ secrets.SSH_HOST_KEY }}" > /root/.ssh/known_hosts
+        (umask 077 && echo "${{ secrets.SSH_KEY }}" > /root/.ssh/id_rsa)
+        ssh-keygen -y -f /root/.ssh/id_rsa > /root/.ssh/id_rsa.pub
+        scp FORM_Tembelan.Tembelan.pbo ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:C:\\Arma3\\master\\mpmissions\\FORM_Tembelan.Tembelan.pbo
+      
+    - name: Restart server
+      uses: appleboy/ssh-action@master
+      if: github.ref == 'master' && github.event_name == 'push'
       with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_content_type: application/octet-stream
-        asset_path: FORM_Tembelan.Tembelan.pbo
-        asset_name: FORM_Tembelan.Tembelan.pbo
-      if: github.event_name == 'push'
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        script: Get-ScheduledTask -TaskPath '\Arma\' -TaskName 'gsri.krypton' | Start-ScheduledTask
+  
