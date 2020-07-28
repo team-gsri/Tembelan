@@ -1,0 +1,41 @@
+name: delivery
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout files
+        uses: actions/checkout@v2
+
+      - name: Lint sources
+        uses: arma-actions/sqflint@v1.0
+        with:
+          args: --exit e --directory FORM_Tembelan.Tembelan
+
+      - name: Make mission pbo
+        uses: team-gsri/actions-make-pbo@master
+        with:
+          mission: FORM_Tembelan.Tembelan
+          briefingName: "[GSRI] Tembelan"
+
+      - name: Upload pbo to github
+        uses: actions/upload-artifact@v2
+        with:
+          name: mission-pbo
+          path: FORM_Tembelan.Tembelan.pbo
+
+      - name: Publish mission to Krypton
+        uses: team-gsri/actions-deploy-mission@master
+        env:
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_HOSTS_KEYS }}
+          SSH_HOSTNAME: ${{ secrets.SSH_ARMA3_HOSTNAME }}
+          SSH_USERNAME: ${{ secrets.SSH_ARMA3_USERNAME }}
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+        with:
+          localPath: FORM_Tembelan.Tembelan.pbo
+          remotePath: ${{ secrets.ARMA3_PATH }}/mpmissions/FORM_Tembelan.Tembelan.pbo
+          instanceName: ${{ secrets.ARMA3_INSTANCE }}
