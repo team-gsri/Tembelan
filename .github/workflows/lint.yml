@@ -17,6 +17,6 @@ jobs:
           args: --exit e --directory FORM_Tembelan.Tembelan
 
       - name: Make mission pbo
-        uses: team-gsri/actions-make-pbo
+        uses: team-gsri/actions-make-pbo@master
         with:
           mission: FORM_Tembelan.Tembelan
