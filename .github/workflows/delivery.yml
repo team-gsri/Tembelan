@@ -17,7 +17,7 @@ jobs:
           args: --exit e --directory FORM_Tembelan.Tembelan
 
       - name: Make mission pbo
-        uses: team-gsri/actions-make-pbo
+        uses: team-gsri/actions-make-pbo@master
         with:
           mission: FORM_Tembelan.Tembelan
           briefingName: "[GSRI] Tembelan"
@@ -29,7 +29,7 @@ jobs:
           path: FORM_Tembelan.Tembelan.pbo
 
       - name: Publish mission to Krypton
-        uses: team-gsri/actions-deploy-mission
+        uses: team-gsri/actions-deploy-mission@master
         env:
           SSH_KNOWN_HOSTS: ${{ secrets.SSH_HOSTS_KEYS }}
           SSH_HOSTNAME: ${{ secrets.SSH_ARMA3_HOSTNAME }}
