@@ -55,7 +55,7 @@ if (missionNamespace getVariable [_playername,""] == "" ) then
 	_targetsTotal = [];
 		_t = [];
 
-
+	private _group = createGroup[EAST, true];
 	{
 		_prob = random 100;
 		_t pushBack _prob;
@@ -70,7 +70,8 @@ if (missionNamespace getVariable [_playername,""] == "" ) then
 			_tgt = selectRandom _targetsTotal;
 			_pos = getPosAtl _x;
 			_dir = getDir _x - 180;
-			_tgtObj = (createGroup EAST) createUnit [_tgt, _pos, [], 0, "FORM"];;
+			_tgtObj = _group createUnit [_tgt, _pos, [], 0, "FORM"];
+			doStop _tgtObj;
 			_tgtObj setDir _dir;
 
 			if (_tgt in _targets) then
