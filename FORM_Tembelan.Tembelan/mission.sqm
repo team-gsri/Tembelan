@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=104;
+		nextID=120;
 	};
 	class Camera
 	{
-		pos[]={4440.5977,20.161896,1326.5179};
-		dir[]={-0.78460604,-0.42133358,-0.45509994};
-		up[]={-0.36463371,0.90681362,-0.2115116};
-		aside[]={-0.50180274,-1.6340055e-006,0.86511469};
+		pos[]={4443.8286,62.081253,1324.4756};
+		dir[]={-0.1060434,-0.5500471,0.82852072};
+		up[]={-0.069862522,0.83502275,0.54576403};
+		aside[]={0.99202281,-2.439192e-006,0.1269753};
 	};
 };
 binarizationWanted=0;
@@ -144,7 +144,7 @@ class AddonsMetaData
 		class Item3
 		{
 			className="A3_Structures_F_Enoch_Military";
-			name="Arma 3 Enoch - Military Buildings and Structures";
+			name="Arma 3 Contact Platform - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -278,7 +278,7 @@ class AddonsMetaData
 		class Item23
 		{
 			className="A3_Structures_F_Enoch";
-			name="Arma 3 Enoch - Buildings and Structures";
+			name="Arma 3 Contact Platform - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -437,7 +437,7 @@ class AddonsMetaData
 		class Item46
 		{
 			className="A3_Weapons_F_Enoch";
-			name="Arma 3 Enoch - Weapons and Accessories";
+			name="Arma 3 Contact Platform - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -472,7 +472,7 @@ class AddonsMetaData
 		class Item51
 		{
 			className="A3_Structures_F_Enoch_Infrastructure";
-			name="Arma 3 Enoch - Infrastructure Objects";
+			name="Arma 3 Contact Platform - Infrastructure Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -521,7 +521,7 @@ randomSeed=1144503;
 class ScenarioData
 {
 	author="legcs";
-	overviewText="Affrontez le parcours d'entrainement au déplacement et le centre d'instruction au de tir du GSRI, afin de développer vos compétences personnelles.";
+	overviewText="Affrontez le parcours d'entrainement au déplacement et le centre d'instruction au tir du GSRI, afin de développer vos compétences personnelles.";
 	overViewPicture="image\iconeserveur.jpg";
 	briefing=0;
 	debriefing=0;
