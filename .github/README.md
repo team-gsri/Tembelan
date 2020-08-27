@@ -13,8 +13,9 @@ If you are willing to contribute to this repo, please read carefully the **Contr
 The following documents provide additional information on rules and standards applying to this project :
 
 *   [MIT License](../LICENSE.md)
-*   [GSRI code of conduct](https://github.com/team-gsri/CodeOfConduct/blob/master/.github/CODE_OF_CONDUCT.md)
-*   [Contributing to this project](./CONTRIBUTING.md)
+*   [GSRI Code of Conduct](https://github.com/team-gsri/.github/blob/master/CODE_OF_CONDUCT.md)
+*   [GSRI Standard Contribution Guide](https://github.com/team-gsri/.github/blob/master/CONTRIBUTING.md)
+*   [GSRI Security Policy](https://github.com/team-gsri/.github/blob/master/SECURITY.md)
 
 ## How to get help
 
