@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=104;
+		nextID=120;
 	};
 	class Camera
 	{
@@ -30,7 +30,6 @@ binarizationWanted=0;
 addons[]=
 {
 	"A3_Boat_F_Destroyer_Destroyer_01",
-	"A3_Modules_F_Multiplayer",
 	"A3_Structures_F_Walls",
 	"A3_Structures_F_Naval_Piers",
 	"A3_Structures_F_Enoch_Military_Airfield",
@@ -110,6 +109,7 @@ addons[]=
 	"A3_Structures_F_EPC_Civ_Accessories",
 	"A3_Structures_F_Furniture",
 	"acex_sitting",
+	"A3_Modules_F_Multiplayer",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Structures_F_Dominants_Castle",
 	"A3_Signs_F",
@@ -129,22 +129,22 @@ class AddonsMetaData
 		};
 		class Item1
 		{
-			className="A3_Modules_F";
-			name="Arma 3 Alpha - Scripted Modules";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item2
-		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item3
+		class Item2
 		{
 			className="A3_Structures_F_Enoch_Military";
-			name="Arma 3 Enoch - Military Buildings and Structures";
+			name="Arma 3 Contact Platform - Military Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -243,7 +243,7 @@ class AddonsMetaData
 		class Item18
 		{
 			className="A3_Props_F_Enoch";
-			name="Arma 3 Enoch - Decorative and Mission Objects";
+			name="Arma 3 Contact Platform - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -278,7 +278,7 @@ class AddonsMetaData
 		class Item23
 		{
 			className="A3_Structures_F_Enoch";
-			name="Arma 3 Enoch - Buildings and Structures";
+			name="Arma 3 Contact Platform - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -437,7 +437,7 @@ class AddonsMetaData
 		class Item46
 		{
 			className="A3_Weapons_F_Enoch";
-			name="Arma 3 Enoch - Weapons and Accessories";
+			name="Arma 3 Contact Platform - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -472,7 +472,7 @@ class AddonsMetaData
 		class Item51
 		{
 			className="A3_Structures_F_Enoch_Infrastructure";
-			name="Arma 3 Enoch - Infrastructure Objects";
+			name="Arma 3 Contact Platform - Infrastructure Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -640,13 +640,13 @@ class Mission
 			name="Frégate";
 			class Entities
 			{
-				items=2;
+				items=1;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3382.4333,-0.2689991,233.88684};
+						position[]={3382.4331,-0.26900005,233.88699};
 						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
@@ -656,25 +656,13 @@ class Mission
 					};
 					id=983;
 					type="Land_Destroyer_01_base_F";
-					atlOffset=14.731001;
-				};
-				class Item1
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={3370.625,7,233.75};
-						angles[]={0,0.89011788,0};
-					};
-					id=1169;
-					type="ModuleRespawnPosition_F";
-					atlOffset=22;
+					atlOffset=14.731;
 					class CustomAttributes
 					{
 						class Attribute0
 						{
-							property="ModuleRespawnPosition_F_Marker";
-							expression="_this setVariable ['Marker',_value,true];";
+							property="GSRI_FREMM_selectTemplate";
+							expression="_this setVariable ['GSRI_FREMM_selectTemplate',_value];";
 							class Value
 							{
 								class data
@@ -686,92 +674,16 @@ class Mission
 											"STRING"
 										};
 									};
-									value="0";
+									value="GSRI_Normandie";
 								};
 							};
 						};
-						class Attribute1
-						{
-							property="ModuleRespawnPosition_F_Name";
-							expression="_this setVariable ['Name',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Frégate - Pont principal";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ModuleRespawnPosition_F_Side";
-							expression="_this setVariable ['Side',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="1";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ModuleRespawnPosition_F_ShowNotification";
-							expression="_this setVariable ['ShowNotification',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="1";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ModuleRespawnPosition_F_Type";
-							expression="_this setVariable ['Type',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="0";
-								};
-							};
-						};
-						nAttributes=5;
+						nAttributes=1;
 					};
 				};
 			};
 			id=1170;
-			atlOffset=18.365501;
+			atlOffset=18.365499;
 		};
 		class Item1
 		{
