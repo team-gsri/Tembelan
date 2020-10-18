@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4440.5977,20.161896,1326.5179};
-		dir[]={-0.78460604,-0.42133358,-0.45509994};
-		up[]={-0.36463371,0.90681362,-0.2115116};
-		aside[]={-0.50180274,-1.6340055e-006,0.86511469};
+		pos[]={4532.8862,32.767239,947.74261};
+		dir[]={0.70046806,-0.42631921,-0.57257324};
+		up[]={0.33024079,0.90447885,-0.26993176};
+		aside[]={-0.63295108,-2.2897148e-006,-0.77433956};
 	};
 };
 binarizationWanted=0;
@@ -683,7 +683,7 @@ class Mission
 				};
 			};
 			id=1170;
-			atlOffset=18.365499;
+			atlOffset=14.731;
 		};
 		class Item1
 		{
@@ -9411,6 +9411,7 @@ class Mission
 							side="Empty";
 							class Attributes
 							{
+								init="call{[this] spawn {params[""_thisPlane""]; sleep 5; _thisPlane allowDamage true;}}";
 								reportRemoteTargets=1;
 								receiveRemoteTargets=1;
 								reportOwnPosition=1;
@@ -9418,6 +9419,48 @@ class Mission
 							id=325;
 							type="B_T_VTOL_01_infantry_F";
 							atlOffset=2.5349998;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ammoBox";
+									expression="[_this,_value] call bis_fnc_initAmmoBox;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="[[[[""FirstAidKit"",""Medikit""],[10,1]],[[],[]],[[""ToolKit""],[1]],[[""B_Parachute""],[36]]],false]";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								nAttributes=2;
+							};
 						};
 						class Item3
 						{
@@ -9430,6 +9473,7 @@ class Mission
 							side="Empty";
 							class Attributes
 							{
+								init="call{[this] spawn {params[""_thisPlane""]; sleep 5; _thisPlane allowDamage true;}}";
 								reportRemoteTargets=1;
 								receiveRemoteTargets=1;
 								reportOwnPosition=1;
@@ -9437,6 +9481,48 @@ class Mission
 							id=326;
 							type="B_T_VTOL_01_vehicle_F";
 							atlOffset=1.5349998;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ammoBox";
+									expression="[_this,_value] call bis_fnc_initAmmoBox;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="[[[[""FirstAidKit"",""Medikit""],[10,1]],[[],[]],[[""ToolKit""],[1]],[[""B_Parachute""],[4]]],false]";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								nAttributes=2;
+							};
 						};
 						class Item4
 						{
